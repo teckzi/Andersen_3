@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable-v24/background_imageview.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/button_normal.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/button_pressed.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.32747747747747746" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/imagebutton.xml" value="0.23914473684210527" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/shadow.xml" value="0.283984375" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/shadow_rect.xml" value="0.283984375" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/drawable/shadows.xml" value="0.32747747747747746" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout-land/fragment_task_one.xml" value="0.2896396396396396" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/activity_main.xml" value="0.317481884057971" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/austria.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/colombia.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/denmark.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/flag_cardview.xml" value="0.18" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/flag_cardview_two.xml" value="0.291213768115942" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/flag_cardview_wo.xml" value="0.22894736842105262" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/fragment_task_one.xml" value="0.2" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/fragment_task_two.xml" value="0.22" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/italy.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/madagascar.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/poland.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/spinner_ring.xml" value="0.22894736842105262" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/switzerland.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/layout/thailand.xml" value="0.21960382513661203" />
+        <entry key="..\:/GitHub/Andersen_3/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.23914473684210527" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
