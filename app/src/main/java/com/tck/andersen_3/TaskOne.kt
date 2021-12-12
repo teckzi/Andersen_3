@@ -13,8 +13,7 @@ class TaskOne : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.fragment_task_one, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_task_one, container, false)
     }
 }
 

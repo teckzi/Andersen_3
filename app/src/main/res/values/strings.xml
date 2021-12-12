@@ -2,8 +2,8 @@
     <string name="app_name">Andersen_3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="taskone">Task One</string>
-    <string name="tasktwo">Task Two</string>
+    <string name="taskOne">Task One</string>
+    <string name="taskTwo">Task Two</string>
     <string name="put_your_link_here">Put your image url here</string>
     <string name="load_image">load image</string>
     <string name="load_image_button">load image button</string>

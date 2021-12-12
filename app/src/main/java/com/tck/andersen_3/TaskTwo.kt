@@ -8,74 +8,95 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.Toast
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
-import com.tck.andersen_3.databinding.FragmentTaskTwoBinding
+import com.bumptech.glide.load.engine.DiskCacheStrategy
+import com.google.android.material.textfield.TextInputEditText
 import java.util.concurrent.Executors
 
 
 class TaskTwo : Fragment() {
 
-    private lateinit var binding : FragmentTaskTwoBinding
+    private lateinit var loadButton:ImageButton
+    private lateinit var imageView: ImageView
+    private lateinit var urlEditText: TextInputEditText
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding =  DataBindingUtil.inflate(inflater,R.layout.fragment_task_two, container, false)
 
-        return binding.root
+        val view = inflater.inflate(R.layout.fragment_task_two, container, false)
+
+        loadButton = view.findViewById(R.id.loadButton)
+        imageView = view.findViewById(R.id.imageView)
+        urlEditText = view.findViewById(R.id.imageEditText)
+
+        return view
     }
 
     override fun onStart() {
         super.onStart()
-        binding.imageButton.setOnClickListener {
+        loadButton.setOnClickListener {
 
             //glideImageLoad()
 
             defaultImageLoad()
-
         }
     }
 
     private fun glideImageLoad(){
-        binding.imageProgressbar.visibility = View.VISIBLE
         Glide
             .with(this)
-            .load(binding.imageEditText.text.toString())
-            .error(Toast.makeText(context, "Your image link is incorrect", Toast.LENGTH_SHORT).show())
-            .into(binding.imageView)
-        clearEditText()
+            .load(urlEditText.text.toString())
+            .placeholder(loadingPlaceHolder())
+            .error(R.drawable.ic_baseline_broken_image_24)
+            .fallback(R.drawable.ic_baseline_image_24)
+            .error(Toast.makeText(requireContext(),"Your image link is incorrect",Toast.LENGTH_SHORT).show())
+            .skipMemoryCache(true)
+            .diskCacheStrategy(DiskCacheStrategy.NONE)
+            .into(imageView)
     }
 
     private fun defaultImageLoad(){
-        binding.imageProgressbar.visibility = View.VISIBLE
+        imageView.setImageDrawable(loadingPlaceHolder())
+
         val executor = Executors.newSingleThreadExecutor()
         val handler = Handler(Looper.getMainLooper())
         var image: Bitmap?
         executor.execute {
             try {
-                val imageSearch = java.net.URL(binding.imageEditText.text.toString()).openStream()
+                val imageSearch = java.net.URL(urlEditText.text.toString()).openStream()
                 image = BitmapFactory.decodeStream(imageSearch)
                 handler.post {
-                    binding.imageView.setImageBitmap(image)
-                    clearEditText()
+                    imageView.setImageBitmap(image)
                 }
             }
             catch (e: Exception){
                 requireActivity().runOnUiThread {
-                    clearEditText()
+                    imageView.setImageResource(R.drawable.ic_baseline_broken_image_24)
                     Toast.makeText(requireActivity(),"Your image link is incorrect",Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
 
-    private fun clearEditText(){
-        binding.imageEditText.text.clear()
-        binding.imageProgressbar.visibility = View.INVISIBLE
+    private fun loadingPlaceHolder() : CircularProgressDrawable{
+        val drawable = CircularProgressDrawable(requireContext())
+        drawable.setColorSchemeColors(
+            R.color.design_default_color_primary,
+            R.color.design_default_color_on_secondary,
+            R.color.design_default_color_primary_variant
+        )
+        drawable.centerRadius = 90f
+        drawable.strokeWidth = 15f
+        drawable.start()
+
+        return drawable
     }
 }
 

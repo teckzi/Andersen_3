@@ -10,7 +10,7 @@ import com.tck.andersen_3.TaskTwo
 
 class ViewPagerAdapter(fm: FragmentActivity): FragmentStateAdapter(fm) {
 
-    val pageNameList = listOf(fm.getString(R.string.taskone), fm.getString(R.string.tasktwo))
+    val pageNameList = listOf(fm.getString(R.string.taskOne), fm.getString(R.string.taskTwo))
 
     override fun getItemCount(): Int {
         return pageNameList.size
